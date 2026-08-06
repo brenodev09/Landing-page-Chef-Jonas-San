@@ -9,11 +9,30 @@
   flex-direction: column;
   gap: 1rem;
   margin-bottom: clamp(2.5rem, 5vw, 4rem);
-  max-width: 620px;
+  /* max-width: 620px; */
+}
+
+.titulo{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .tituloGaleria {
   font-size: clamp(2rem, 3.6vw, 2.9rem);
+  color: var(--cor-off-white);
+}
+
+.linkContato {
+  font-family: var(--fonte-editorial);
+  font-size: 1.15rem;
+  color: var(--cor-dourado-suave);
+  transition: color 0.35s var(--easing-suave);
+  width: fit-content;
+  border-bottom: .8px solid var(--cor-dourado-suave) ;
+}
+
+.linkContato:hover {
   color: var(--cor-off-white);
 }
 

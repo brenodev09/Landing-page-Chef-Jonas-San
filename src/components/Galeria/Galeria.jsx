@@ -130,7 +130,10 @@ export default function Galeria() {
       <div className="envolucro-largura">
         <div className={estilos.cabecalhoGaleria}>
           <p className="rotulo-editorial">Registro</p>
-          <h2 className={estilos.tituloGaleria}>Um arquivo de momentos e técnica</h2>
+          <div className={estilos.titulo}>
+            <h2 className={estilos.tituloGaleria}>Um arquivo de momentos e técnica</h2>
+            <a target='blank' href="https://www.instagram.com/chef_jonas_san?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" className={estilos.linkContato}>Ver mais no Instagram</a>
+          </div>
         </div>
 
         <div className={estilos.grelhaMasonry}>

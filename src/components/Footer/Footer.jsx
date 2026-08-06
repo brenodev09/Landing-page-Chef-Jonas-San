@@ -60,9 +60,9 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className={`envolucro-largura ${estilos.linhaInferior}`}>
+      <div className={` ${estilos.linhaInferior}`}>
         <span>© {anoAtual} Jonas Personal Chef. Todos os direitos reservados.</span>
-        <span className={estilos.assinaturaRodape}>一期一会 — cada encontro, uma vez na vida</span>
+        {/* <span className={estilos.assinaturaRodape}>一期一会 — cada encontro, uma vez na vida</span> */}
       </div>
     </footer>
   )

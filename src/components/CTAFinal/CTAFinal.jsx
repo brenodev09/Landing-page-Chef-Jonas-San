@@ -65,6 +65,7 @@ export default function CTAFinal() {
           <div className={estilos.contatosDiretos}>
             <a href="mailto:contato@chefjonas.com.br" className={estilos.linkContato}>contato@chefjonas.com.br</a>
             <a href="https://wa.me/5511999999999" className={estilos.linkContato}>+55 11 99999-9999</a>
+            <a href="https://www.instagram.com/chef_jonas_san?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" className={estilos.linkContato}>@chef_jonas_san</a>
           </div>
         </div>
 

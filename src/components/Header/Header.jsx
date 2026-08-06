@@ -67,8 +67,9 @@ export default function Header() {
         </nav>
 
         <div className={estilos.acoesCabecalho}>
-          <button className={estilos.botaoOrcamentoHeader} onClick={() => aoClicarLink('#contato')}>
-            Solicitar Orçamento
+          <button className={estilos.botaoOrcamentoHeader}>
+            <a href="https://wa.me/5511999999999" target='blank'>Solicitar Orçamento</a>
+            
           </button>
           <button
             className={`${estilos.botaoMenu} ${menuAberto ? estilos.botaoMenuAberto : ''}`}
