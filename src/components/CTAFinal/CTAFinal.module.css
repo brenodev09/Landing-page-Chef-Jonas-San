@@ -1,0 +1,202 @@
+.ctaSecao {
+  position: relative;
+  padding: var(--espaco-secao) 0;
+  background: var(--cor-preto);
+  overflow: hidden;
+}
+
+.camadaFundoCTA {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.brilhoCTA {
+  position: absolute;
+  bottom: -20%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(70vw, 900px);
+  height: 500px;
+  background: radial-gradient(ellipse, rgba(169, 29, 36, 0.22) 0%, transparent 70%);
+  filter: blur(20px);
+}
+
+.grelhaCTA {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: clamp(2.5rem, 6vw, 5rem);
+  align-items: center;
+}
+
+@media (max-width: 940px) {
+  .grelhaCTA {
+    grid-template-columns: 1fr;
+  }
+}
+
+.conteudoCTA {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.2rem;
+}
+
+.tituloCTA {
+  font-size: clamp(2.2rem, 4.4vw, 3.4rem);
+  color: var(--cor-off-white);
+}
+
+.tituloCTA em {
+  font-style: italic;
+  color: var(--cor-vermelho-brilho);
+}
+
+.textoCTA {
+  color: var(--cor-off-white-fosco);
+  font-weight: 300;
+  max-width: 42ch;
+}
+
+.contatosDiretos {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  padding-top: 1.4rem;
+  border-top: 1px solid var(--cor-linha);
+  width: 100%;
+}
+
+.linkContato {
+  font-family: var(--fonte-editorial);
+  font-size: 1.15rem;
+  color: var(--cor-dourado-suave);
+  transition: color 0.35s var(--easing-suave);
+  width: fit-content;
+}
+
+.linkContato:hover {
+  color: var(--cor-off-white);
+}
+
+.cartaoFormulario {
+  background: var(--cor-carvao);
+  border: 1px solid var(--cor-linha-dourada);
+  border-radius: 4px;
+  padding: clamp(1.8rem, 3.5vw, 2.6rem);
+}
+
+.formulario {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.linhaDupla {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.2rem;
+}
+
+@media (max-width: 480px) {
+  .linhaDupla {
+    grid-template-columns: 1fr;
+  }
+}
+
+.campoFormulario {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.campoFormulario label {
+  font-size: 0.68rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--cor-fumaca);
+}
+
+.campoFormulario input,
+.campoFormulario select,
+.campoFormulario textarea {
+  background: rgba(241, 236, 225, 0.03);
+  border: 1px solid var(--cor-linha);
+  border-radius: 2px;
+  padding: 0.85rem 1rem;
+  color: var(--cor-off-white);
+  font-family: var(--fonte-utilitaria);
+  font-size: 0.9rem;
+  transition: border-color 0.35s var(--easing-suave), background 0.35s var(--easing-suave);
+  resize: none;
+}
+
+.campoFormulario input::placeholder,
+.campoFormulario textarea::placeholder {
+  color: var(--cor-fumaca);
+}
+
+.campoFormulario input:focus,
+.campoFormulario select:focus,
+.campoFormulario textarea:focus {
+  outline: none;
+  border-color: var(--cor-dourado);
+  background: rgba(241, 236, 225, 0.05);
+}
+
+.campoFormulario select {
+  color-scheme: dark;
+}
+
+.botaoEnviar {
+  margin-top: 0.6rem;
+  padding: 1.05rem 2rem;
+  background: var(--cor-vermelho-japones);
+  color: var(--cor-off-white);
+  font-size: 0.78rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  border-radius: 2px;
+  transition: background 0.4s var(--easing-suave), transform 0.4s var(--easing-suave);
+}
+
+.botaoEnviar:hover {
+  background: var(--cor-vermelho-brilho);
+  transform: translateY(-2px);
+}
+
+.mensagemSucesso {
+  text-align: center;
+  padding: clamp(2rem, 5vw, 3rem) 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.seloSucesso {
+  width: 52px;
+  height: 52px;
+  border: 1px solid var(--cor-vermelho-japones);
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  color: var(--cor-vermelho-brilho);
+  font-family: var(--fonte-display);
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+}
+
+.mensagemSucesso h3 {
+  font-size: 1.4rem;
+  color: var(--cor-off-white);
+}
+
+.mensagemSucesso p {
+  color: var(--cor-fumaca);
+  max-width: 34ch;
+  font-size: 0.9rem;
+}

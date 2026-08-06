@@ -1,0 +1,153 @@
+.depoimentosSecao {
+  position: relative;
+  padding: var(--espaco-secao) 0;
+  background: var(--cor-preto);
+}
+
+.cabecalhoDepoimentos {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 620px;
+  margin: 0 auto clamp(2.5rem, 5vw, 4rem);
+  text-align: center;
+  align-items: center;
+}
+
+.tituloDepoimentos {
+  font-size: clamp(2rem, 3.6vw, 2.9rem);
+  color: var(--cor-off-white);
+}
+
+.painelCarrossel {
+  position: relative;
+  max-width: 780px;
+  margin: 0 auto;
+  padding: clamp(2.5rem, 6vw, 4.5rem) clamp(3.2rem, 8vw, 5rem);
+  border: 1px solid var(--cor-linha-dourada);
+  border-radius: 3px;
+  background: radial-gradient(ellipse 70% 60% at 50% 0%, rgba(169, 29, 36, 0.08), transparent 70%);
+}
+
+@media (max-width: 640px) {
+  .painelCarrossel {
+    padding: clamp(2.5rem, 8vw, 3.5rem) clamp(2.6rem, 10vw, 3.5rem);
+  }
+}
+
+.aspasDecorativas {
+  display: block;
+  font-family: var(--fonte-display);
+  font-size: 4.5rem;
+  color: var(--cor-vermelho-japones);
+  line-height: 1;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.swiperDepoimentos {
+  width: 100%;
+}
+
+.slideDepoimento {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.citacaoDepoimento {
+  font-family: var(--fonte-editorial);
+  font-style: italic;
+  font-size: clamp(1.3rem, 2.5vw, 1.85rem);
+  color: var(--cor-off-white);
+  line-height: 1.5;
+  max-width: 44ch;
+  margin: 0 auto;
+  min-height: 8.5rem;
+}
+
+@media (max-width: 640px) {
+  .citacaoDepoimento {
+    min-height: 0;
+  }
+}
+
+.autoriaDepoimento {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.nomeAutor {
+  font-size: 0.95rem;
+  letter-spacing: 0.04em;
+  color: var(--cor-dourado-suave);
+}
+
+.contextoAutor {
+  font-size: 0.78rem;
+  color: var(--cor-fumaca);
+}
+
+.setaNavegacao {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 3;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: 1px solid var(--cor-linha-dourada);
+  color: var(--cor-dourado-suave);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: border-color 0.35s var(--easing-suave), color 0.35s var(--easing-suave), background 0.35s var(--easing-suave);
+}
+
+.setaNavegacao:hover {
+  border-color: var(--cor-vermelho-brilho);
+  color: var(--cor-off-white);
+  background: rgba(212, 50, 47, 0.14);
+}
+
+.setaAnterior {
+  left: clamp(-0.2rem, -2vw, 0.6rem);
+}
+
+.setaProxima {
+  right: clamp(-0.2rem, -2vw, 0.6rem);
+}
+
+@media (max-width: 640px) {
+  .setaAnterior { left: 0.2rem; }
+  .setaProxima { right: 0.2rem; }
+  .setaNavegacao { width: 34px; height: 34px; }
+}
+
+.navegacaoDepoimentos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.6rem;
+  margin-top: 2.2rem;
+}
+
+.marcadorDepoimento {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: 1px solid var(--cor-linha-dourada);
+  background: transparent;
+  display: inline-block;
+  cursor: pointer;
+  transition: background 0.4s var(--easing-suave), transform 0.4s var(--easing-suave), border-color 0.4s var(--easing-suave);
+}
+
+.marcadorAtivo {
+  background: var(--cor-vermelho-brilho);
+  border-color: var(--cor-vermelho-brilho);
+  transform: scale(1.25);
+}

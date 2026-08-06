@@ -1,0 +1,150 @@
+.sobreSecao {
+  position: relative;
+  padding: var(--espaco-secao) 0;
+  background: #0d0b0a;
+}
+
+.grelhaSobre {
+  display: grid;
+  grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+  gap: clamp(2.5rem, 6vw, 6rem);
+  align-items: start;
+}
+
+@media (max-width: 900px) {
+  .grelhaSobre {
+    grid-template-columns: 1fr;
+  }
+}
+
+.colunaImagemSobre {
+  position: sticky;
+  top: 7rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+@media (max-width: 900px) {
+  .colunaImagemSobre {
+    position: static;
+  }
+}
+
+.molduraEditorial {
+  position: relative;
+  border: 1px solid var(--cor-linha-dourada);
+  padding: 14px;
+}
+
+.imagemEditorial {
+  width: 100%;
+  height: auto;
+  filter: grayscale(0.25) contrast(1.05);
+}
+
+.legendaVertical {
+  font-family: var(--fonte-editorial);
+  font-style: italic;
+  font-size: 0.85rem;
+  color: var(--cor-fumaca);
+  text-align: center;
+  letter-spacing: 0.04em;
+}
+
+.colunaConteudoSobre {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.3rem;
+}
+
+.tituloSobre {
+  font-size: clamp(2rem, 3.6vw, 2.9rem);
+  color: var(--cor-off-white);
+}
+
+.paragrafoSobre {
+  color: var(--cor-off-white-fosco);
+  font-weight: 300;
+  max-width: 62ch;
+}
+
+.blocoEspecializacoes {
+  margin-top: 0.8rem;
+  padding-top: 1.6rem;
+  border-top: 1px solid var(--cor-linha);
+  width: 100%;
+}
+
+.rotuloBloco {
+  display: block;
+  font-size: 0.7rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--cor-dourado);
+  margin-bottom: 0.9rem;
+}
+
+.listaEspecializacoes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+}
+
+.listaEspecializacoes li {
+  font-size: 0.82rem;
+  color: var(--cor-off-white-fosco);
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--cor-linha);
+  border-radius: 2px;
+}
+
+.linhaDoTempo {
+  position: relative;
+  margin-top: 1.6rem;
+  padding-left: 1.8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.7rem;
+  width: 100%;
+}
+
+.linhaVerticalTempo {
+  position: absolute;
+  left: 3px;
+  top: 6px;
+  bottom: 6px;
+  width: 1px;
+  background: linear-gradient(180deg, var(--cor-vermelho-japones), var(--cor-linha));
+}
+
+.itemTrajetoria {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.pontoTempo {
+  position: absolute;
+  left: -1.8rem;
+  top: 6px;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--cor-vermelho-brilho);
+  box-shadow: 0 0 0 3px rgba(212, 50, 47, 0.15);
+}
+
+.anoTempo {
+  font-family: var(--fonte-display);
+  font-size: 1.05rem;
+  color: var(--cor-off-white);
+}
+
+.eventoTempo {
+  font-size: 0.9rem;
+  color: var(--cor-fumaca);
+  max-width: 52ch;
+}
